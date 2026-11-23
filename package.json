@@ -1,0 +1,1 @@
+{"description":"Onchain Wire — verified crypto & world news Pi App (Pi Next Hackathon 2026)","engines":{"node":">=18"},"name":"onchain-wire-pi","private":true,"scripts":{"start":"node server.mjs"},"type":"module","version":"1.0.0"}

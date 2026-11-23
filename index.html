@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Onchain Wire — Crypto &amp; World News</title>
+<meta name="description" content="Verified crypto and world news for Pioneers. Every story checked against at least two trusted outlets before publication.">
+<link rel="stylesheet" href="style.css">
+<!-- Pi JS SDK — required on every page of a Pi App (the SDK is NOT injected by Pi Browser) -->
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">OW</div>
+    <div>
+      <h1>Onchain Wire</h1>
+      <p class="tagline">Verified crypto &amp; world news</p>
+    </div>
+  </div>
+  <div id="auth-area">
+    <button id="btn-signin" class="btn btn-primary" type="button">Sign in with Pi</button>
+    <span id="user-chip" class="user-chip" hidden></span>
+  </div>
+</header>
+
+<div id="demo-banner" class="banner" hidden>
+  <strong>Demo mode.</strong> You are viewing Onchain Wire in a regular browser.
+  Open this app inside <strong>Pi Browser</strong> to sign in with Pi and use Pi payments.
+  The news feed below is fully real.
+</div>
+<div id="status-banner" class="banner banner-info" hidden></div>
+
+<main>
+  <!-- ===== Headline list view ===== -->
+  <section id="view-list">
+    <nav id="filters" class="filters" aria-label="News categories"></nav>
+    <div id="feed-meta" class="feed-meta"></div>
+    <div id="cards" class="cards"></div>
+    <p id="feed-empty" class="empty" hidden>No stories in this category yet.</p>
+
+    <aside class="support-card">
+      <h2>Support Onchain Wire</h2>
+      <p>Onchain Wire is free and independent. If it keeps you informed, you can
+         support the newsroom with a small Pi payment.</p>
+      <button id="btn-support" class="btn btn-accent" type="button">
+        Support — 0.1 Pi <span class="test-tag">TEST</span>
+      </button>
+      <p id="support-note" class="note">Test payment surface for the Pi Next Hackathon build.
+         It runs the full Pi payment flow against stub server endpoints; no real Pi moves yet.</p>
+    </aside>
+  </section>
+
+  <!-- ===== Article view ===== -->
+  <section id="view-article" hidden>
+    <button id="btn-back" class="btn btn-ghost" type="button">← All headlines</button>
+    <article class="article">
+      <div class="article-meta">
+        <span id="art-category" class="badge"></span>
+        <time id="art-time"></time>
+      </div>
+      <h2 id="art-title"></h2>
+      <div id="art-body"></div>
+      <footer class="article-foot">
+        <p><strong>Sources:</strong> <span id="art-source"></span></p>
+        <p class="note">Every Onchain Wire story is verified against at least two trusted
+           outlets before publication. Follow us on X: @xdropseeker</p>
+      </footer>
+    </article>
+  </section>
+</main>
+
+<footer class="pagefoot">
+  <a href="privacy.html">Privacy Policy</a>
+  <span aria-hidden="true">·</span>
+  <span>Onchain Wire — Pi Next Hackathon 2026 build</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
